@@ -1,9 +1,10 @@
+/*
 import React from "react";
 import MainContent from "./contact";
 import Typography from "@material-ui/core/Typography";
 import Container from "@material-ui/core/Container";
 
-function App() {
+function App2() {
     return (
         <Page title="Want to contact us?">
             <Container>
@@ -17,4 +18,4 @@ function App() {
     );
 }
 
-export default App;
+export default App2;*/
