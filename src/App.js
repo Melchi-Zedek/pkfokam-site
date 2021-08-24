@@ -1,10 +1,16 @@
 import './App.css';
+import FixedPosition from './components/AppBar/AppBar';
+import React from "react";
+import MainContent from './Pages/Contact/contact';
+
 
 function App() {
   return (
-    <div className="App">
-     
-    </div>
+    <React.Fragment>
+    <MainContent/>
+      {/*<FixedPosition/>*/}
+
+    </React.Fragment>
   );
 }
 
