@@ -7,12 +7,9 @@ import Grid from "@material-ui/core/Grid";
 
 const styles = theme => ({
     card: {
-
         maxWidth: 400,
         marginTop: theme.spacing(4),
         /*background: 'linear-gradient(45deg, #1414dd 30%, #d0d0d9 90%)',*/
-        display: 'grid',
-
         gridGap: theme.spacing(3),
     },
     content: {
@@ -24,17 +21,15 @@ const styles = theme => ({
     },
 
     gridCenter: {
-      display: 'flex',
+        display: 'grid',
         justifyContent: 'center'
     }
 });
 
 const MainContent = withStyles(styles)(({ classes, justify }) => (
-
-    <Grid container spacing={1} className={classes.gridCenter}>
-
-        <Grid container item xs={12} spacing={2}>
-            <div className={classes.root}>
+    <div className={classes.root}>
+    <Grid container spacing={2}>
+        <Grid item xs={6}>
             <Card className={classes.card}>
                 <CardContent>
                     <Typography variant="h4"> Admissions Officer </Typography>
@@ -42,14 +37,13 @@ const MainContent = withStyles(styles)(({ classes, justify }) => (
                         Ms. Grace NDAYA
                     </Typography>
                     <Typography className={classes.content}>
-                        Phone:+237 242019027
-                        E-mail:pkfokam@pkfinstitute.com
+                        Phone: <a href="tel:+237242019027">(+237) 242019027</a>
+                        <br/>E-mail: <a href="mailto:pkfokam@pkfinstitute.com">pkfokam@pkfinstitute.com</a>
                     </Typography>
                 </CardContent>
             </Card>
-            </div>
         </Grid>
-        <Grid container item xs={12} spacing={3}>
+        <Grid item xs={6}>
             <Card className={classes.card}>
                 <CardContent>
                     <Typography variant="h4"> Academic Affairs Officer </Typography>
@@ -57,13 +51,13 @@ const MainContent = withStyles(styles)(({ classes, justify }) => (
                         Mr. Simon Pierre AMBOUMBE
                     </Typography>
                     <Typography className={classes.content}>
-                        Phone: +237 677740257
-                        E-mail: simon.amboumbe@pkfinstitute.com
+                        Phone: <a href="tel:(+237)677740257">(+237) 677740257</a>
+                        <br/>E-mail: <a href="mailto:simon.amboumbe@pkfinstitute.com">simon.amboumbe@pkfinstitute.com</a>
                     </Typography>
                 </CardContent>
             </Card>
         </Grid>
-        <Grid container item xs={12} spacing={3}>
+        <Grid item xs={6}>
             <Card className={classes.card}>
                 <CardContent>
                     <Typography variant="h4"> Vice Dean </Typography>
@@ -71,14 +65,13 @@ const MainContent = withStyles(styles)(({ classes, justify }) => (
                         Dr. Francis Nematchoua
                     </Typography>
                     <Typography className={classes.content} noWrap>
-                        <a href="tel:+237 677833829">Phone: +237 677833829</a>
-                        <br/>
-                        <a href="mailto:nematchouafrancis@yahoo.fr">E-mail: nematchouafrancis@yahoo.fr</a>
+                        Phone: <a href="tel:+237677833829">(+237) 677833829</a>
+                        <br/>E-mail: <a href="mailto:nematchouafrancis@yahoo.fr">nematchouafrancis@yahoo.fr</a>
                     </Typography>
                 </CardContent>
             </Card>
         </Grid>
-        <Grid container item xs={12} spacing={3}>
+        <Grid item xs={6}>
             <Card className={classes.card}>
                 <CardContent>
                     <Typography variant="h4"> Rector </Typography>
@@ -86,12 +79,14 @@ const MainContent = withStyles(styles)(({ classes, justify }) => (
                         Pr. Thomas NJINE
                     </Typography>
                     <Typography className={classes.content}>
-                        Phone:+237 677625665
-                        E-mail:thomas.njine@pkfinstitute.com
+                        Phone: <a href="tel:+237677625665">(+237) 677625665</a>
+                        <br/>E-mail: <a href="mailto:thomas.njine@pkfinstitute.com">thomas.njine@pkfinstitute.com</a>
                     </Typography>
                 </CardContent>
             </Card>
         </Grid>
     </Grid>
+    </div>
+
 ));
 export default MainContent;
