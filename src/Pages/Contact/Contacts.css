@@ -1,0 +1,89 @@
+.gridCenter{
+    display: flex;
+    justify-content: center;
+    color: black;
+    background-color: red;
+    border-radius: 5px;
+}
+.container{
+    width: 100%;
+    position: relative;
+    height:200vh;
+    background-color: pink;
+}
+.c1{
+    position: relative;
+    width: auto;
+    height: 90vh; margin: 0px auto 0px auto;
+    top: -50px;
+    background-color: #f00;
+    background-image: url("TrumpCall.jpg");
+}
+@media screen and ( max-width: 1199px ) and ( min-width: 1024px) {
+    div.responsive {
+        position: relative;
+        max-width: 100%;
+        height: 597px; margin: 0px auto 0px auto;
+        top: -50px;
+        background-color: #f00;
+        background-size: cover;
+        background-image: url("TrumpCall.jpg");
+        width: auto;
+    }
+}
+
+@media screen and ( max-width: 480px ) and ( min-width: 400px )   {
+    div.responsive {
+        position: relative;
+        max-width: 100%;
+        height: 400px; margin: 0px auto 0px auto;
+        top: -50px;
+        background-color: #f00;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-image: url("TrumpCall.jpg");
+        width: 400px;
+    }
+    card.resize{
+        width: 88%;
+    }
+}
+
+@media screen and (orientation: landscape) {
+
+    div.responsive {
+        position: relative;
+        max-width: 100%;
+        width: auto;
+        height: 90vh; margin: 0px auto 0px auto;
+        top: -50px;
+        background-color: #f00;
+        background-size: cover;
+        background-image: url("TrumpCall.jpg");
+    }
+}
+
+@media screen and ( max-width: 480px ) and ( min-width: 400px )  {
+    Paper.responsive {
+        width: 96%;
+        position: relative;
+        top: 560%;
+        bottom: 4%;
+        left: 0;
+        height: 40vh; /*margin: 0px auto 0px auto*/;
+        margin-top: 1cm;
+        margin-right: 0;
+        margin-bottom: 900cm;
+        margin-left: 0;
+        }
+}
+/*div.responsive { height: auto; }*/
+
+.c2{
+    position: relative;
+    height: 100px;
+    width: 90%;
+    background-color: purple;
+    left: 5%;
+    top: 85%;
+}

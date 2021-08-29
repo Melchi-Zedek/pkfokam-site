@@ -1,21 +1,25 @@
-/*
-import React from "react";
-import MainContent from "./contact";
-import Typography from "@material-ui/core/Typography";
-import Container from "@material-ui/core/Container";
+import React from 'react';
+import MainContent from './contact';
+import "./Contacts.css";
+import Typography from '@material-ui/core/Typography';
+import Paper from "@material-ui/core/Paper";
 
-function App2() {
+
+export default function FixedContainer() {
     return (
-        <Page title="Want to contact us?">
-            <Container>
-                <Stack direction="row" alignItems="center" justifyContent="space-between" mb={5}>
-                    <Typography variant="h4" gutterBottom>
-                        Our Contacts
-                    </Typography>
-                </Stack>
-            </Container>
-        </Page>
+        <React.Fragment>
+            <div className="container">
+            <div className="responsive">
+                <div className= "Paper.responsive">
+                <Typography variant = "h1">
+                    Contact Us
+                </Typography>
+                </div>
+                <div className="c2">
+                    <MainContent/>
+                </div>
+            </div>
+            </div>
+        </React.Fragment>
     );
 }
-
-export default App2;*/

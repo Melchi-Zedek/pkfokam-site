@@ -4,35 +4,45 @@ import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import Grid from "@material-ui/core/Grid";
+import "./Contacts.css";
+
+
 
 const styles = theme => ({
     card: {
-        maxWidth: 400,
+        /*maxWidth: 400,*/
         marginTop: theme.spacing(4),
-        /*background: 'linear-gradient(45deg, #1414dd 30%, #d0d0d9 90%)',*/
-        gridGap: theme.spacing(3),
+        background: 'linear-gradient(45deg, #1414dd 30%, #d0d0d9 90%)',
+        width: '85%',
+        outlineStyle: 'solid',
+        outlineColor : 'invert'
     },
     content: {
-        marginTop: theme.spacing(1)
+        marginTop: theme.spacing(2)
     },
 
     root: {
         flexGrow: 1
     },
 
-    gridCenter: {
-        display: 'grid',
-        justifyContent: 'center'
-    }
+    gridCenter2: {
+        marginLeft: '4%'
+       }
 });
 
-const MainContent = withStyles(styles)(({ classes, justify }) => (
-    <div className={classes.root}>
-    <Grid container spacing={2}>
-        <Grid item xs={6}>
-            <Card className={classes.card}>
+const Container = props => <Grid container {...props} />;
+const Item = props => <Grid item {...props}  />;
+
+const MainContent = withStyles(styles)(({ classes }) => (
+    <div  className = "gridCenter">
+    <div className = {classes.root}>
+        <Container spacing={2} className={classes.gridCenter2}>
+   {/* <Grid container spacing = {2} className={classes.gridCenter2}>*/}
+        {/*<Grid item xs = {6}>*/}
+            <Item xs={12} sm={6} md={6}>
+            <Card className = {classes.card}>
                 <CardContent>
-                    <Typography variant="h4"> Admissions Officer </Typography>
+                    <Typography variant="h5"> Admissions Officer </Typography>
                     <Typography variant="subtitle1">
                         Ms. Grace NDAYA
                     </Typography>
@@ -42,11 +52,13 @@ const MainContent = withStyles(styles)(({ classes, justify }) => (
                     </Typography>
                 </CardContent>
             </Card>
-        </Grid>
-        <Grid item xs={6}>
+            </Item>
+        {/*</Grid>*/}
+        {/*<Grid item xs={6}>*/}
+            <Item xs={12} sm={6} md={6}>
             <Card className={classes.card}>
                 <CardContent>
-                    <Typography variant="h4"> Academic Affairs Officer </Typography>
+                    <Typography variant="h5"> Academic Affairs Officer </Typography>
                     <Typography variant="subtitle1">
                         Mr. Simon Pierre AMBOUMBE
                     </Typography>
@@ -56,11 +68,13 @@ const MainContent = withStyles(styles)(({ classes, justify }) => (
                     </Typography>
                 </CardContent>
             </Card>
-        </Grid>
-        <Grid item xs={6}>
+            </Item>
+        {/*</Grid>*/}
+        {/*<Grid item xs={6}>*/}
+            <Item xs = {12} sm={6} md={6}>
             <Card className={classes.card}>
                 <CardContent>
-                    <Typography variant="h4"> Vice Dean </Typography>
+                    <Typography variant="h5"> Vice Dean </Typography>
                     <Typography variant="subtitle1">
                         Dr. Francis Nematchoua
                     </Typography>
@@ -70,11 +84,13 @@ const MainContent = withStyles(styles)(({ classes, justify }) => (
                     </Typography>
                 </CardContent>
             </Card>
-        </Grid>
-        <Grid item xs={6}>
+            </Item>
+        {/*</Grid>*/}
+        {/*<Grid item xs={6} >*/}
+            <Item xs={12} sm={6} md={6}>
             <Card className={classes.card}>
                 <CardContent>
-                    <Typography variant="h4"> Rector </Typography>
+                    <Typography variant="h5"> Rector </Typography>
                     <Typography variant="subtitle1">
                         Pr. Thomas NJINE
                     </Typography>
@@ -84,9 +100,11 @@ const MainContent = withStyles(styles)(({ classes, justify }) => (
                     </Typography>
                 </CardContent>
             </Card>
-        </Grid>
-    </Grid>
+            </Item>
+       {/* </Grid>*/}
+   {/* </Grid>*/}
+        </Container>
     </div>
-
+    </div>
 ));
 export default MainContent;
